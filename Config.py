@@ -13,7 +13,7 @@ class Config:
         self.beta = 1.0     # parameter beta used in G_MmDAE_star_mini (Eq. 14)
         self.gamma = 0.1   # parameter margin used in G_MmDAE_star_mini (Eq. 13)
         
-        self.optmer = 'sgd'  # optimizer, could be 'sgd' or 'adm'
+        self.optmer = 'adm'  # optimizer, could be 'sgd' or 'adm'
         self.lr = 0.0001    # learning rate
         self.momentum = 0.9 # momentum 
         self.epochs = 100   # epochs

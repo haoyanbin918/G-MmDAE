@@ -86,12 +86,12 @@ class Net0(nn.Module):
         m1OUTd = self.m1drop(m1EMB)
 
         m1OUTs = F.linear(m1OUTd, self.m1R2[0].weight.t(), self.m1S3_bias)
-        m1OUTs = F.tanh(m1OUTs)
+        m1OUTs = torch.tanh(m1OUTs)
         m1OUTs = self.m1S4(m1OUTs)
         #
 
         m1OUTc = F.linear(m1OUTd, self.m2R2[0].weight.t(), self.m1C3_bias)
-        m1OUTc = F.tanh(m1OUTc)
+        m1OUTc = torch.tanh(m1OUTc)
         m1OUTc = self.m1C4(m1OUTc)
 
         #=========================
@@ -102,11 +102,11 @@ class Net0(nn.Module):
         m2OUTd = self.m2drop(m2EMB)
 
         m2OUTs = F.linear(m2OUTd, self.m2R2[0].weight.t(), self.m2S3_bias)
-        m2OUTs = F.tanh(m2OUTs)
+        m2OUTs = torch.tanh(m2OUTs)
         m2OUTs = self.m2S4(m2OUTs)
 
         m2OUTc = F.linear(m2OUTd, self.m1R2[0].weight.t(), self.m2C3_bias)
-        m2OUTc = F.tanh(m2OUTc)
+        m2OUTc = torch.tanh(m2OUTc)
         m2OUTc = self.m2C4(m2OUTc)    
 
         return m1OUTs, m1OUTc, m2OUTs, m2OUTc
