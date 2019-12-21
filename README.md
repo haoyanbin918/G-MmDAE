@@ -16,6 +16,7 @@ Blip10000: http://doras.dcu.ie/17922/2/MMSys2013BBlip10000.pdf
 # Usage  
 python train_*.py  
 python test.py  
+for computing the Gaussian parameter sigma, go to https://lvdmaaten.github.io/tsne/  
 
 # Evaluation
 'retrieval_lnk.py' in './evaluate' is for creating the linking runs  
