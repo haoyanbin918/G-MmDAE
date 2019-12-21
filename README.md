@@ -1,5 +1,7 @@
 # G-MmDAE
---The code for the paper: "Neighbourhood Structure Preserving Cross-modal Embedding for Video Hyperlinking"-- —-Version 1.0—- --Updated: 21/12/2019--
+--The code for the paper: "Neighbourhood Structure Preserving Cross-modal Embedding for Video Hyperlinking"-- 
+—-Version 1.0—- 
+--Updated: 21/12/2019--
 
 # Requirements to run the experiments
 Python 2
@@ -19,4 +21,5 @@ python test.py
 'retrieval_lnk.py' in './evaluate' is for creating the linking runs
 please download the code from https://github.com/robinaly/sh_eval to ./evaluate
 
-# Author Email: haoyanbin@hotmail.com
+# Author Email:
+haoyanbin@hotmail.com
