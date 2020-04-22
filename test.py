@@ -70,12 +70,12 @@ def main():
     model = MODEL_EVAL(conf)
     model_dict = model.state_dict()
     
-    modelpre = torch.load(modelpre_name, map_location=lambda storage, loc: storage)
+    modelpre = torch.load(modelpre_name)
     modelpre_dict = modelpre.state_dict()
 
     print "Updating model"
     pretrained_params = {k:v for k, v in modelpre_dict.items() if k in model_dict}
-    model_dict.update(pretrained_params)
+    model_dict.load_state_dict(pretrained_params)
     
     model.eval()
 
